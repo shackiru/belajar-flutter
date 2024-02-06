@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "288958712388",
+    "project_id": "first-course-45462",
+    "storage_bucket": "first-course-45462.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288958712388:android:788a2ba388d03de95eca11",
+        "android_client_info": {
+          "package_name": "com.example.brew_crew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCExPv9L1nk7Xo68bSIRx4d5evCsPOI2nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
