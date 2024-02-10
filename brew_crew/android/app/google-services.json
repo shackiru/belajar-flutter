@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "288958712388",
-    "project_id": "first-course-45462",
-    "storage_bucket": "first-course-45462.appspot.com"
+    "project_number": "971420418209",
+    "project_id": "brew-crew-fc2b4",
+    "storage_bucket": "brew-crew-fc2b4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:288958712388:android:788a2ba388d03de95eca11",
+        "mobilesdk_app_id": "1:971420418209:android:c6108597d5929df93830e0",
         "android_client_info": {
           "package_name": "com.example.brew_crew"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCExPv9L1nk7Xo68bSIRx4d5evCsPOI2nU"
+          "current_key": "AIzaSyBr6Se025JZ4E8_mGV6CbL24EYHCUZuLis"
         }
       ],
       "services": {
