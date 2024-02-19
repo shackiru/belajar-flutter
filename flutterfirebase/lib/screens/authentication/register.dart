@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutterfirebase/services/auth.dart';
 
 class Register extends StatefulWidget {
+
+  final toggleView;
+  const Register({Key? key, this.toggleView}) : super(key: key);  
+
+
   @override
   State<Register> createState() => _RegisterState();
 }
@@ -9,6 +14,7 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> 
 {
 final AuthService _authService = AuthService();
+final _formKey = GlobalKey<FormState>();
 
   String email = '';
   String password = '';
@@ -29,7 +35,7 @@ final AuthService _authService = AuthService();
             icon: Icon(Icons.person),
             label: Text('Sign In'),
             onPressed: () {
-              
+              widget.toggleView();
             },
           )
         ],
@@ -39,6 +45,7 @@ final AuthService _authService = AuthService();
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Form
         (
+          key: _formKey,
           child: Column
           (
             children: <Widget>
@@ -46,6 +53,7 @@ final AuthService _authService = AuthService();
               SizedBox(height: 20.0),
               TextFormField
               (
+                validator: (val) => val!.isEmpty ? 'Enter an email' : null,
                 onChanged: (val)
                 {
                   setState(() => email = val);
@@ -54,6 +62,7 @@ final AuthService _authService = AuthService();
               SizedBox(height: 20.0),
               TextFormField
               (
+                validator: (val) => val!.length < 6 ? 'Enter a password ^+ characters long' : null,
                 obscureText: true,
                 onChanged: (val)
                 {
@@ -65,8 +74,11 @@ final AuthService _authService = AuthService();
               (
                 onPressed: () async 
                 {
-                  print(email);
-                  print(password);
+                  if(_formKey.currentState!.validate())
+                  {
+                    print(email);
+                    print(password);
+                  }
                 },
                 child: Text
                 (

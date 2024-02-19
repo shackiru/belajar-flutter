@@ -3,6 +3,9 @@ import 'package:flutterfirebase/services/auth.dart';
 
 class SignIn extends StatefulWidget 
 {
+  final toggleView;
+  const SignIn({Key? key, this.toggleView}) : super(key: key);  
+
   @override
   State<SignIn> createState() => _SignInState();
 }
@@ -31,7 +34,7 @@ class _SignInState extends State<SignIn>
             icon: Icon(Icons.person),
             label: Text('Register'),
             onPressed: () {
-              
+              widget.toggleView();
             },
           )
         ],

@@ -3,8 +3,7 @@ import 'package:flutterfirebase/screens/authentication/register.dart';
 import 'package:flutterfirebase/screens/authentication/sign_in.dart';
 
 class Authenticate extends StatefulWidget {
-  const Authenticate({super.key});
-
+  
   @override
   State<Authenticate> createState() => _AuthenticateState();
 }
@@ -12,19 +11,20 @@ class Authenticate extends StatefulWidget {
 class _AuthenticateState extends State<Authenticate> {
 
   bool showSignIn = true;
-  void toggleView()
+  toggleView()
   {
-    setState(() => showSignIn);
+    setState(() => showSignIn = !showSignIn);
   }
   @override
+  
   Widget build(BuildContext context) {
     if(showSignIn)
     {
-      return SignIn();
+      return SignIn(toggleView: toggleView);
     }
     else
     {
-      return Register();
+      return Register(toggleView: toggleView);
     }
   }
 }
