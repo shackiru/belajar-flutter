@@ -4,7 +4,7 @@ import 'package:flutterfirebase/services/auth.dart';
 class SignIn extends StatefulWidget 
 {
   final toggleView;
-  const SignIn({Key? key, this.toggleView}) : super(key: key);  
+  const SignIn({super.key, this.toggleView});  
 
   @override
   State<SignIn> createState() => _SignInState();
@@ -26,13 +26,13 @@ class _SignInState extends State<SignIn>
       (
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Sign in to Brew Crew'),
+        title: const Text('Sign in to Brew Crew'),
         actions: <Widget>
         [
           ElevatedButton.icon
           (
-            icon: Icon(Icons.person),
-            label: Text('Register'),
+            icon: const Icon(Icons.person),
+            label: const Text('Register'),
             onPressed: () {
               widget.toggleView();
             },
@@ -41,14 +41,14 @@ class _SignInState extends State<SignIn>
       ),
       body: Container
       (
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Form
         (
           child: Column
           (
             children: <Widget>
             [
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               TextFormField
               (
                 onChanged: (val)
@@ -56,7 +56,7 @@ class _SignInState extends State<SignIn>
                   setState(() => email = val);
                 },
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               TextFormField
               (
                 obscureText: true,
@@ -65,7 +65,7 @@ class _SignInState extends State<SignIn>
                   setState(() => password = val);
                 }
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               ElevatedButton
               (
                 onPressed: () async 
@@ -73,22 +73,22 @@ class _SignInState extends State<SignIn>
                   print(email);
                   print(password);
                 },
-                child: Text
-                (
-                  'Sign In',
-                  style: TextStyle(color: Colors.white),
-                ),
                 style: ButtonStyle
               (
                 textStyle: MaterialStateProperty.all
                 (
-                  TextStyle(color: Colors.white)
+                  const TextStyle(color: Colors.white)
                 ),
                 backgroundColor: MaterialStateProperty.all
                 (
                   Colors.pink[400]
                 )
-              )
+              ),
+                child: const Text
+                (
+                  'Sign In',
+                  style: TextStyle(color: Colors.white),
+                )
               )
             ]
           )
