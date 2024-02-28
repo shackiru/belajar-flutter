@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "118172708267",
+    "project_id": "learn-chat-app-961f2",
+    "storage_bucket": "learn-chat-app-961f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118172708267:android:801a46d2ab5b91437976ee",
+        "android_client_info": {
+          "package_name": "com.example.chatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdQXLoCTPiD1_GANM2nIpVKvYBMjNw8xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

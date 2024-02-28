@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:chatapp/screens/chats.dart';
+import 'package:chatapp/screens/calls.dart';
+import 'package:chatapp/screens/people.dart';
+import 'package:chatapp/screens/settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +25,7 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget
 {
   HomePage({Key? key}) : super(key: key);
+  var screens = [Chats(), Calls(), People(), Settings()];
 
   @override
   Widget build(BuildContext context)
@@ -45,7 +50,7 @@ class HomePage extends StatelessWidget
             ),
             BottomNavigationBarItem
             (
-              label: "Profile",
+              label: "People",
               icon: Icon(CupertinoIcons.person_alt_circle),
             ),
             BottomNavigationBarItem
@@ -57,13 +62,7 @@ class HomePage extends StatelessWidget
           ),
           tabBuilder: (BuildContext context, int index)
           {
-            return Container
-            (
-              child: Center
-              (
-                child: Text("$index")
-              ),
-            );
+            return screens[index];
           },
       ),
     );
